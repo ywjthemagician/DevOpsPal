@@ -22,6 +22,10 @@
 # 最新
 - [2023.9.30] ......
 
+<br>
+<br>
+<br>
+    
 
 # 介绍
 DevOpsPal 是一系列基于 DevOps 知识的开源大语言模型，旨在为了帮助工程师在 DevOps 整个生命周期做到有问题，问 DevOpsPal。
@@ -33,7 +37,9 @@ DevOps 将整个项目生命周期划分为了七个阶段，分别为：计划�
 
 所以我们基于自己收集的 DevOps 的相关数据，产出了首个以帮助工程师在整个 DevOps 生命周期中可能遇到的问题为目的的大模型，取名为 DevOpsPal。我们分别开源了经过 DevOps 语料加训过的 Base 模型和经过 DevOps QA 数据对齐过后的 Chat 模型。在 DevOps 的评测榜单上，我们的模型取得了同参数量级别 SOTA 的水平。相关训练数据集和评测数据集也已经开源。
 
-
+<br>
+<br>
+<br>
 
 
 # 模型
@@ -45,41 +51,63 @@ DevOps 将整个项目生命周期划分为了七个阶段，分别为：计划�
 | DevOpsPal-13B-Base | 13B | DevOps Corpus| Baichuan-13B | Coming soon|
 | DevOpsPal-13B-Chat | 13B | DevOps Corpus + DevOps QA| Baichuan-13B | Coming soon|
 
-
+<br>
+<br>
+<br>
 
 
 
 # 评测
 Coming soon
 
-
+<br>
+<br>
+<br>
 
 # 使用
 ## 推理
 Coming soon
 
+<br>
+<br>
+<br>
 
 ## 微调
 ### 全量参数微调
 Coming soon
 
+<br>
+<br>
+<br>
 
 ### LoRA 微调
 Coming soon
 
+<br>
+<br>
+<br>
 
 ## 量化
 Coming soon
 
+<br>
+<br>
+<br>
 
 # 数据
 ## DevOps Corpus
 Coming soon
 
+<br>
+<br>
+<br>
 
 ## DevOps QA
 Coming soon
 
+<br>
+<br>
+<br>
 
 
 # 免责声明
