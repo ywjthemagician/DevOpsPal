@@ -116,6 +116,12 @@ Coming soon
 # 免责声明
 
 
+<br>
+<br>
+<br>
+
+# Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=luban-agi/DevOpsPal&type=Date)](https://star-history.com/#luban-agi/DevOpsPal&Date)
 
 
 
