@@ -31,7 +31,10 @@
 DevOpsPal 是一系列基于 DevOps 知识的开源大语言模型，旨在为了帮助工程师在 DevOps 整个生命周期做到有问题，问 DevOpsPal。
 
 DevOps 将整个项目生命周期划分为了七个阶段，分别为：计划，编码，构建，测试，部署，运维，观察。如下图所示，整个周期属于一个无限的循环。
-
+<br>
+<div  align="center">
+ <img src="https://github.com/luban-agi/DevOpsPal/blob/main/image/devops_flow.png" width = "700" height = "350" alt="devops flow" align=center />
+</div>
 
 在这个循环中，每一步在实施的时候，都会产生各种的问题需要去搜寻答案，比如在构建过程中，需要了解某个包的函数。以往会主要从网络上搜索相关的答案，这一步会比较耗时，而且可能还找不到想要的结果。
 
