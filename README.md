@@ -49,9 +49,9 @@ DevOps 将整个项目生命周期划分为了七个阶段，分别为：计划�
 
 | **模型名** | **参数量** | **训练数据** | **基础模型** | **地址** |
 | :--- | :---- |:----| :---- | :----| 
-| DevOpsPal-7B-Base | 7B | DevOps Corpus|Qwen-7B | Coming soon|
+| DevOpsPal-7B | 7B | DevOps Corpus|Qwen-7B | Coming soon|
 | DevOpsPal-7B-Chat | 7B | DevOps Corpus + DevOps QA| Qwen-7B | Coming soon|
-| DevOpsPal-13B-Base | 13B | DevOps Corpus| Baichuan-13B | Coming soon|
+| DevOpsPal-13B | 13B | DevOps Corpus| Baichuan-13B | Coming soon|
 | DevOpsPal-13B-Chat | 13B | DevOps Corpus + DevOps QA| Baichuan-13B | Coming soon|
 
 <br>
