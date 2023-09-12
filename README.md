@@ -5,10 +5,10 @@
 </div>
 
 <p align="center">
-🤗 <a href="https://huggingface.co" target="_blank">DevOpsPal-7B-Base</a> 
-  • 
-🤗 <a href="https://huggingface.co" target="_blank">DevOpsPal-7B-Chat</a> 
-</p>
+🤗 <a href="https://huggingface.co" target="_blank">Hugging Face</a> • 
+🤖 <a href="https://modelscope.cn/" target="_blank">ModelScope</a> • 
+💬 <a href="https://github.com/" target="_blank">WeChat</a>
+</p
 
 <div align="center">
 <h4 align="center">
@@ -19,19 +19,11 @@
 </h4>
 </div>
 
-# 目录
-- [介绍](#介绍)
-- [引用](#引用)
-- [评测](#评测)
-- [点赞历史](#点赞历史)
-  
-# 介绍
-
 DevOpsPal是国内首个开源的**开发运维大模型**，主要致力于在 DevOps 领域发挥实际价值。目前，DevOpsPal 能够帮助工程师在 DevOps 生命周期做到有问题，问 DevOpsPal。
 
 我们开源了经过高质量 DevOps 语料训练的 Base 模型和经过 DevOps QA 数据对齐后的 Chat 模型。
 在开发运维领域评测基准 [DevOpsEval](https://github.com/luban-agi/DevOps-Eval) 上，DevOpsPal 取得同规模**最佳**的效果。
-欢迎阅读我们的技术报告获取更多信息。
+欢迎阅读我们的[技术报告](https://arxiv.org)获取更多信息。
 
 <!--
 DevOps 将整个项目生命周期划分为了七个阶段，分别为：计划，编码，构建，测试，部署，运维，观察。如下图所示，整个周期属于一个无限的循环。
@@ -52,14 +44,22 @@ DevOps 将整个项目生命周期划分为了七个阶段，分别为：计划�
 | 13B     | 🤗 [DevOpsPal-13B-Base](https://huggingface.co) | 🤗 [DevOpsPal-13B-Chat](https://huggingface.co) | 🤗 [DevOpsPal-13B-Chat-4bits](https://huggingface.co) |
 
 
-# 最新
+# 最新消息
 - [2023.9.30] 开源 DevOpsPal-7B-Base 和 DevOpsPal-7B-Chat，以及 Chat 版本的 Int4 量化模型。
 
-# 评测
+# 模型评测
 Coming soon
 
-# 推理
-针对 DevOpsPal-7B-Chat，可以用以下代码进行推理
+# 快速使用
+我们提供简单的示例来说明如何利用 🤗 Transformers 快速使用 DevopsPal-7B 和 DevopsPal-7B-Chat。
+
+## 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+## Chat 模型推理示例
+
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation import GenerationConfig
@@ -84,10 +84,10 @@ print(response)
 # 第三轮对话
 response, history = model.chat(tokenizer, "。。。", history=history)
 print(response)
-
 ```
+## Base 模型推理示例
 
-# 微调
+# 模型训练
 
 ## 数据准备
 代码内部通过调用 datasets.load_dataset 读取数据，支持 load_dataset 所支持的数据读取方式，比如 json，csv，自定义读取脚本等方式（但推荐数据准备为 jsonl 格式的文件）。然后还需要更新 `data/dataset_info.json` 文件，具体可以参考 `data/README.md`。
@@ -168,7 +168,7 @@ torchrun --nproc_per_node=2 --nnodes=$WORLD_SIZE --master_port=$MASTER_PORT --ma
 使用者可以在这个基础上调整来发起自己的 SFT 训练，更加详细的可配置项建议通过 `python src/train_bash.py -h` 来获取完整的参数列表。
 
 ## 量化
-我们提供了 DevOpsPal-Chat 系列的量化版本模型，当然也可以通过以下代码来量化自己加训过的模型
+我们提供了 DevOpsPal-Chat 系列的量化模型，当然也可以通过以下代码来量化自己加训过的模型
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -191,8 +191,6 @@ quantized_model = quantizer.quantize_model(model, tokenizer)
 out_dir = 'save_path_of_your_quantized_model'
 quantized_model.save_quantized(out_dir)
 ```
-
-推荐阅读 [Quantization](https://huggingface.co/docs/optimum/llm_quantization/usage_guides/quantization) 来获取更多的帮助。
 
 # 数据
 
