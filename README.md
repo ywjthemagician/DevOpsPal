@@ -19,10 +19,11 @@
 </h4>
 </div>
 
-DevOpsPal是国内首个开源的**开发运维大模型**，主要致力于在 DevOps 领域发挥实际价值。目前，DevOpsPal 能够帮助工程师在 DevOps 生命周期做到有问题，问 DevOpsPal。
+DevOpsPal是国内首个开源的**开发运维大模型**，主要致力于在 DevOps 领域发挥实际价值。目前，DevOpsPal 能够帮助工程师回答在 DevOps 生命周期中遇到的问题。
 
-我们开源了经过高质量 DevOps 语料训练的 Base 模型和经过 DevOps QA 数据对齐后的 Chat 模型。
-在开发运维领域评测基准 [DevOpsEval](https://github.com/luban-agi/DevOps-Eval) 上，DevOpsPal 取得同规模**最佳**的效果。
+我们开源了经过高质量 DevOps 语料训练后的 **Base** 模型和经过 DevOps QA 数据对齐后的 **Chat** 模型。
+此外，我们也将预训练数据 **DevOpsCorpus** 和指令微调数据 **DevOpsQA**开源。
+在开发运维领域评测基准 [DevOpsEval](https://github.com/luban-agi/DevOps-Eval) 上，DevOpsPal 取得同规模的**最佳**效果。
 欢迎阅读我们的[技术报告](https://arxiv.org)获取更多信息。
 
 <!--
@@ -40,8 +41,8 @@ DevOps 将整个项目生命周期划分为了七个阶段，分别为：计划�
 开源模型和下载链接见下表：
 |         | 基座模型  | 对齐模型 | 对齐模型 Int4 量化 |
 |:-------:|:-------:|:-------:|:-----------------:|
-| 7B      | 🤗 [DevOpsPal-7B-Base](https://huggingface.co) | 🤗 [DevOpsPal-7B-Chat](https://huggingface.co) | 🤗 [DevOpsPal-7B-Chat-4bits](https://huggingface.co) |
-| 13B     | 🤗 [DevOpsPal-13B-Base](https://huggingface.co) | 🤗 [DevOpsPal-13B-Chat](https://huggingface.co) | 🤗 [DevOpsPal-13B-Chat-4bits](https://huggingface.co) |
+| 7B      | 🤗 [DevOpsPal-7B-Base](https://huggingface.co) | 🤗 [DevOpsPal-7B-Chat](https://huggingface.co) | 🤗 [DevOpsPal-7B-Chat-Int4](https://huggingface.co) |
+| 13B     | 🤗 [DevOpsPal-13B-Base](https://huggingface.co) | 🤗 [DevOpsPal-13B-Chat](https://huggingface.co) | 🤗 [DevOpsPal-13B-Chat-Int4](https://huggingface.co) |
 
 
 # 最新消息
@@ -58,6 +59,7 @@ Coming soon
 ```bash
 pip install -r requirements.txt
 ```
+
 ## Chat 模型推理示例
 
 ```python
