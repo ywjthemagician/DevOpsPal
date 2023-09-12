@@ -6,7 +6,7 @@
 
 <p align="center">
 🤗 <a href="https://huggingface.co" target="_blank">Hugging Face</a> • 
-🤖 <a href="https://modelscope.cn/" target="_blank">ModelScope</a> • 
+<!-- 🤖 <a href="https://modelscope.cn/" target="_blank">ModelScope</a> •  -->
 💬 <a href="https://github.com/" target="_blank">WeChat</a>
 </p
 
