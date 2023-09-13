@@ -19,13 +19,13 @@
 </h4>
 </div>
 
-D   evOpsPal是国内首个开源的**开发运维大模型**，主要致力于在 DevOps 领域发挥实际价值。目前，DevOpsPal 能够帮助工程师回答在 DevOps 生命周期中遇到的问题。
+DevOpsPal 是国内首个开源的**开发运维大模型**，主要致力于在 DevOps 领域发挥实际价值。目前，DevOpsPal 能够帮助工程师回答在 DevOps 生命周期中遇到的问题。
 
 我们开源了经过高质量 DevOps 语料训练后的 **Base** 模型和经过 DevOps QA 数据对齐后的 **Chat** 模型。
-此外，我们也将预训练数据 **DevOpsCorpus** 和指令微调数据 **DevOpsQA**开源。
-在开发运维领域评测基准 [DevOpsEval](https://github.com/luban-agi/DevOps-Eval) 上，DevOpsPal 取得同规模的**最佳**效果。
+在开发运维领域评测基准 [DevOpsEval](https://github.com/luban-agi/DevOps-Eval) 上，DevOpsPal 取得同规模的**最佳效果**。
 欢迎阅读我们的[技术报告](https://arxiv.org)获取更多信息。
 
+<!-- 此外，我们也将预训练数据 **DevOpsCorpus** 和指令微调数据 **DevOpsQA**开源。-->
 <!--
 DevOps 将整个项目生命周期划分为了七个阶段，分别为：计划，编码，构建，测试，部署，运维，观察。如下图所示，整个周期属于一个无限的循环。
 <br>
@@ -87,6 +87,9 @@ print(response)
 response, history = model.chat(tokenizer, "。。。", history=history)
 print(response)
 ```
+
+## 量化模型推理示例
+
 ## Base 模型推理示例
 
 # 模型训练
@@ -194,20 +197,12 @@ out_dir = 'save_path_of_your_quantized_model'
 quantized_model.save_quantized(out_dir)
 ```
 
-# 数据
-
-## 预训练数据
-DevOps Corpus Coming soon
-
-## 指令微调数据
-DevOps QA Coming soon
-
 # 免责声明
 由于语言模型的特性，模型生成的内容可能包含幻觉或者歧视性言论。请谨慎使用 DevOpsPal 系列模型生成的内容。
 如果要公开使用或商用该模型服务，请注意服务方需承担由此产生的不良影响或有害言论的责任，本项目开发者不承担任何由使用本项目（包括但不限于数据、模型、代码等）导致的危害或损失。
 
 # 引用
-如果使用本项目的代码、数据或模型，请引用本项目论文：
+如果使用本项目的代码或模型，请引用本项目论文：
 
 链接：[DevOpsPal](https://arxiv.org)
 
