@@ -19,7 +19,7 @@
 </h4>
 </div>
 
-DevOpsPal是国内首个开源的**开发运维大模型**，主要致力于在 DevOps 领域发挥实际价值。目前，DevOpsPal 能够帮助工程师回答在 DevOps 生命周期中遇到的问题。
+D   evOpsPal是国内首个开源的**开发运维大模型**，主要致力于在 DevOps 领域发挥实际价值。目前，DevOpsPal 能够帮助工程师回答在 DevOps 生命周期中遇到的问题。
 
 我们开源了经过高质量 DevOps 语料训练后的 **Base** 模型和经过 DevOps QA 数据对齐后的 **Chat** 模型。
 此外，我们也将预训练数据 **DevOpsCorpus** 和指令微调数据 **DevOpsQA**开源。
