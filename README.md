@@ -91,6 +91,27 @@ print(response)
 ## 量化模型推理示例
 
 ## Base 模型推理示例
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers.generation import GenerationConfig
+
+# 请注意：分词器默认行为已更改为默认关闭特殊token攻击防护。
+tokenizer = AutoTokenizer.from_pretrained("path_to_DevOpsPal-7B-Base", trust_remote_code=True)
+
+# 默认使用自动模式，根据设备自动选择精度
+model = AutoModelForCausalLM.from_pretrained("path_to_DevOpsPal-7B-Base", device_map="auto", trust_remote_code=True).eval()
+
+# 可指定不同的生成长度、top_p等相关超参
+model.generation_config = GenerationConfig.from_pretrained("path_to_DevOpsPal-7B-Base", trust_remote_code=True)
+
+# 推理
+question = '写一首类似于李白写出的情诗，'
+input_ids = tokenizer(question)['input_ids']
+input_ids = torch.tensor([input_ids]).to(model.device)
+response, history = model.chat(tokenizer, "你好", history=None)
+resp = model.generate(input_ids)
+print(tokenizer.decode(resp[0]))
+```
 
 # 模型训练
 
