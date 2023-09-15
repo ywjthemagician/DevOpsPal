@@ -108,7 +108,6 @@ model.generation_config = GenerationConfig.from_pretrained("path_to_DevOpsPal-7B
 question = '写一首类似于李白写出的情诗，'
 input_ids = tokenizer(question)['input_ids']
 input_ids = torch.tensor([input_ids]).to(model.device)
-response, history = model.chat(tokenizer, "你好", history=None)
 resp = model.generate(input_ids)
 print(tokenizer.decode(resp[0]))
 ```
