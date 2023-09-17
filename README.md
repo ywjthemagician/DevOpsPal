@@ -162,7 +162,7 @@ set -v
 
 torchrun --nproc_per_node=2 --nnodes=$WORLD_SIZE --master_port=$MASTER_PORT --master_addr=$MASTER_ADDR --node_rank=$RANK src/train_bash.py \
     --deepspeed conf/deepspeed_config.json \    # deepspeed 配置地址
-	--stage pt \    # 代表执行 pretrain
+    --stage sft \    # 代表执行 pretrain
     --model_name_or_path path_to_model \    # huggingface下载的模型地址
     --do_train \
     --report_to 'tensorboard' \
